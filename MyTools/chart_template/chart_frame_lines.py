@@ -3,7 +3,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import json, os, warnings
-import vl_convert as vlc
+#import vl_convert as vlc
 
 from MyTools.frequency_conversion import get_available_freq_list
 from MyTools.frequency_conversion import frequency_dict
@@ -1327,11 +1327,11 @@ class line_frame():
         """
         return df.to_csv()
 
-    def get_download_png(self, chart_item):
-        """
-        chart_item: an altair chart.
-        """
-        return vlc.vegalite_to_png(chart_item.to_json(), scale = 2)
+#    def get_download_png(self, chart_item):
+#        """
+#        chart_item: an altair chart.
+#        """
+#        return vlc.vegalite_to_png(chart_item.to_json(), scale = 2)
 
             
     def append_bg_line(self, df):
