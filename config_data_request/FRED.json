@@ -1,0 +1,136 @@
+{
+		"UNRATE-FRED-M":{
+				"params":{
+						"series_id":"UNRATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate"
+		},
+		"FFER-FRED-D":{
+				"params":{
+						"series_id":"DFF",
+						"file_type":"json"
+				},
+				"name":"Federal Funds Effective Rate"
+		},
+		"FFRTUPPER-FRED-D":{
+				"params":{
+						"series_id":"DFEDTARU",
+						"file_type":"json"
+				},
+				"name":"Federal Funds Target Range Upper Limit"
+		},
+		"FFRTLOWER-FRED-D":{
+				"params":{
+						"series_id":"DFEDTARL",
+						"file_type":"json"
+				},
+				"name":"Federal Funds Target Range Lower Limit"
+		},
+		"FFRT-FRED-D":{
+				"params":{
+						"series_id":"DFEDTAR",
+						"file_type":"json"
+				},
+				"name":"Federal Funds Target Rate"
+		},
+		"DISCOUNTPRIMARY-FRED-D":{
+				"params":{
+						"series_id":"DPCREDIT",
+						"file_type":"json"
+				},
+				"name":"Discount Window Primary Credit Rate"
+		},
+		"IORR-FRED-D":{
+				"params":{
+						"series_id":"IORR",
+						"file_type":"json"
+				},
+				"name":"Interest Rate on Required Reserves"
+		},
+		"IORB-FRED-D":{
+				"params":{
+						"series_id":"IORB",
+						"file_type":"json"
+				},
+				"name":"Interest Rate on Reserve Balances"
+		},
+		"ONRRP-FRED-D":{
+				"params":{
+						"series_id":"RRPONTSYAWARD",
+						"file_type":"json"
+				},
+				"name":"Overnight Reverse Repurchase Agreements Award Rate"
+		},
+		"SREPOMR-FRED-D":{
+				"params":{
+						"series_id":"SRFTSYD",
+						"file_type":"json"
+				},
+				"name":"Standing Repo Facility Minimum Bid Rate"
+		},
+		"RECESSION-FRED-D":{
+				"params":{
+						"series_id":"USRECD",
+						"file_type":"json"
+				},
+				"name":"NBER Recession Indicators for the United States"
+		},
+		"FNGDP-FRED-Q":{
+				"params":{
+						"series_id":"NGDPPOT",
+						"file_type":"json"
+				},
+				"name":"Nominal Potential Gross Domestic Product"
+		},
+		"FRGDP-FRED-Q":{
+				"params":{
+						"series_id":"GDPPOT",
+						"file_type":"json"
+				},
+				"name":"Real Potential Gross Domestic Product"
+		},
+		"CPIU-FRED-M":{
+				"params":{
+						"series_id":"CPIAUCSL",
+						"file_type":"json"
+				},
+				"name":"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average"
+		},
+		"CoreCPIU-FRED-M":{
+				"params":{
+						"series_id":"CPILFESL",
+						"file_type":"json"
+				},
+				"name":"Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average"
+		},
+		"Chained_CPIU-FRED-M":{
+				"params":{
+						"series_id":"SUUR0000SA0",
+						"file_type":"json"
+				},
+				"name":"Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average"
+		},
+		"Chained_CoreCPIU-FRED-M":{
+				"params":{
+						"series_id":"SUUR0000SA0L1E",
+						"file_type":"json"
+				},
+				"name":"Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average"
+		},
+		"RGDP-FRED-Q":{
+				"params":{
+						"series_id":"GDPC1",
+						"file_type":"json"
+				},
+				"name":"Real Gross Domestic Product"
+		},
+		"NRUNEM-FRED-M":{
+				"params":{
+						"series_id":"NROUST",
+						"file_type":"json"
+				},
+				"name":"Natural Rate of Unemployment (Short-Term) (DISCONTINUED)"
+		}
+}
+

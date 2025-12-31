@@ -1,0 +1,12 @@
+{
+		"BEA(GDP_Deflator)":"https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*gwn0bv*_ga*MTYwMTE4MjkzMS4xNzYxNTExMTMw*_ga_J4698JNNFT*czE3NjQwNzM3MzckbzgkZzEkdDE3NjQwNzQ5NDAkajU0JGwwJGgw#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI0Il1dfQ==",
+		"BEA(NGDP)":"https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*16sjbxu*_ga*MTQ5ODgyNDYwNS4xNzM2Nzc1ODM1*_ga_J4698JNNFT*czE3NjM3NTYxOTAkbzI0JGcxJHQxNzYzNzU3MDQyJGo1NSRsMCRoMA..#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1Il1dfQ==",
+		"BEA(RGDP)":"https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*16sjbxu*_ga*MTQ5ODgyNDYwNS4xNzM2Nzc1ODM1*_ga_J4698JNNFT*czE3NjM3NTYxOTAkbzI0JGcxJHQxNzYzNzU3MDQyJGo1NSRsMCRoMA..#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI2Il1dfQ==",
+		"BEA(GDI)":"https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*1s61qpy*_ga*MTYwMTE4MjkzMS4xNzYxNTExMTMw*_ga_J4698JNNFT*czE3NjU0NjY1MDUkbzEzJGcxJHQxNzY1NDY2NTI1JGo0MCRsMCRoMA..#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1MSJdXX0=",
+		"FRED(Monetary Policy Rates)":"https://fred.stlouisfed.org/graph/?g=1Ng5J",
+		"FRED(RGDP)":"https://fred.stlouisfed.org/series/GDPC1",
+		"FRED(Real Potential GDP)":"https://fred.stlouisfed.org/series/GDPPOT",
+		"FRED(CPI)":"https://fred.stlouisfed.org/series/CPIAUCSL",
+		"FRED(Unemployment Rate)":"https://fred.stlouisfed.org/series/UNRATE",
+		"FRED(Natural Rate of Unemployment)":"https://fred.stlouisfed.org/series/NROUST"
+}

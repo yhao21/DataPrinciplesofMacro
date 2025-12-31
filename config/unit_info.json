@@ -1,0 +1,30 @@
+{
+		"Level":{
+				"difference term": false,
+				"percentage value": false
+		},
+		"Change":{
+				"difference term": true,
+				"percentage value": false
+		},
+		"Change from Year Ago":{
+				"difference term": true,
+				"percentage value": false
+		},
+		"Percent Change":{
+				"difference term": true,
+				"percentage value": true
+		},
+		"Percent Change from Year Ago":{
+				"difference term": true,
+				"percentage value": true
+		},
+		"Natural Log":{
+				"difference term": false,
+				"percentage value": false
+		},
+		"Index":{
+				"difference term": false,
+				"percentage value": false
+		}
+}
