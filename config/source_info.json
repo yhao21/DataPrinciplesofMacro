@@ -8,5 +8,16 @@
 		"FRED(Real Potential GDP)":"https://fred.stlouisfed.org/series/GDPPOT",
 		"FRED(CPI)":"https://fred.stlouisfed.org/series/CPIAUCSL",
 		"FRED(Unemployment Rate)":"https://fred.stlouisfed.org/series/UNRATE",
-		"FRED(Natural Rate of Unemployment)":"https://fred.stlouisfed.org/series/NROUST"
+		"FRED(Natural Rate of Unemployment)":"https://fred.stlouisfed.org/series/NROUST",
+		"FRED(U-1)":"https://fred.stlouisfed.org/series/U1RATE",
+		"FRED(U-2)":"https://fred.stlouisfed.org/series/U2RATE",
+		"FRED(U-4)":"https://fred.stlouisfed.org/series/U4RATE",
+		"FRED(U-5)":"https://fred.stlouisfed.org/series/U5RATE",
+		"FRED(U-6)":"https://fred.stlouisfed.org/series/U6RATE",
+		"FRED(Labor Force Participation Rate)":"https://fred.stlouisfed.org/series/CIVPART",
+		"FRED(Civilian Noninstitutional Population)":"https://fred.stlouisfed.org/series/CNP16OV",
+		"FRED(Employment Level)":"https://fred.stlouisfed.org/series/CE16OV",
+		"FRED(Unemployment Level)":"https://fred.stlouisfed.org/series/UNEMPLOY",
+		"FRED(Not in Labor Force)":"https://fred.stlouisfed.org/series/LNS15000000",
+		"FRED(Civilian Labor Force Level)":"https://fred.stlouisfed.org/series/CLF16OV"
 }

@@ -4,133 +4,240 @@
 						"series_id":"UNRATE",
 						"file_type":"json"
 				},
-				"name":"Unemployment Rate"
+				"name":"Unemployment Rate",
+				"unit":"Percent, %"
+		},
+		"U1-FRED-M":{
+				"params":{
+						"series_id":"U1RATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate (U-1)",
+				"unit":"Percent, %"
+		},
+		"U2-FRED-M":{
+				"params":{
+						"series_id":"U2RATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate (U-2)",
+				"unit":"Percent, %"
+		},
+		"U4-FRED-M":{
+				"params":{
+						"series_id":"U4RATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate (U-4)",
+				"unit":"Percent, %"
+		},
+		"U5-FRED-M":{
+				"params":{
+						"series_id":"U5RATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate (U-5)",
+				"unit":"Percent, %"
+		},
+		"U6-FRED-M":{
+				"params":{
+						"series_id":"U6RATE",
+						"file_type":"json"
+				},
+				"name":"Unemployment Rate (U-6)",
+				"unit":"Percent, %"
+		},
+		"LFPR-FRED-M":{
+				"params":{
+						"series_id":"CIVPART",
+						"file_type":"json"
+				},
+				"name":"Labor Force Participation Rate",
+				"unit":"Percent, %"
+		},
+		"CNP-FRED-M":{
+				"params":{
+						"series_id":"CNP16OV",
+						"file_type":"json"
+				},
+				"name":"Civilian Noninstitutional Population",
+				"unit":"Thousands of Persons, Not Seasonally Adjusted"
+		},
+		"EMP-FRED-M":{
+				"params":{
+						"series_id":"CE16OV",
+						"file_type":"json"
+				},
+				"name":"Employment Level",
+				"unit":"Thousands of Persons, Seasonally Adjusted"
+		},
+		"UNEMP-FRED-M":{
+				"params":{
+						"series_id":"UNEMPLOY",
+						"file_type":"json"
+				},
+				"name":"Unemployment Level",
+				"unit":"Thousands of Persons, Seasonally Adjusted"
+		},
+		"CLF-FRED-M":{
+				"params":{
+						"series_id":"CLF16OV",
+						"file_type":"json"
+				},
+				"name":"Civilian Labor Force Level",
+				"unit":"Thousands of Persons, Seasonally Adjusted"
+		},
+		"NIL-FRED-M":{
+				"params":{
+						"series_id":"LNS15000000",
+						"file_type":"json"
+				},
+				"name":"Not in Labor Force",
+				"unit":"Thousands of Persons, Seasonally Adjusted"
 		},
 		"FFER-FRED-D":{
 				"params":{
 						"series_id":"DFF",
 						"file_type":"json"
 				},
-				"name":"Federal Funds Effective Rate"
+				"name":"Federal Funds Effective Rate",
+				"unit":"Percent, %"
 		},
 		"FFRTUPPER-FRED-D":{
 				"params":{
 						"series_id":"DFEDTARU",
 						"file_type":"json"
 				},
-				"name":"Federal Funds Target Range Upper Limit"
+				"name":"Federal Funds Target Range Upper Limit",
+				"unit":"Percent, %"
 		},
 		"FFRTLOWER-FRED-D":{
 				"params":{
 						"series_id":"DFEDTARL",
 						"file_type":"json"
 				},
-				"name":"Federal Funds Target Range Lower Limit"
+				"name":"Federal Funds Target Range Lower Limit",
+				"unit":"Percent, %"
 		},
 		"FFRT-FRED-D":{
 				"params":{
 						"series_id":"DFEDTAR",
 						"file_type":"json"
 				},
-				"name":"Federal Funds Target Rate"
+				"name":"Federal Funds Target Rate",
+				"unit":"Percent, %"
 		},
 		"DISCOUNTPRIMARY-FRED-D":{
 				"params":{
 						"series_id":"DPCREDIT",
 						"file_type":"json"
 				},
-				"name":"Discount Window Primary Credit Rate"
+				"name":"Discount Window Primary Credit Rate",
+				"unit":"Percent, %"
 		},
 		"IORR-FRED-D":{
 				"params":{
 						"series_id":"IORR",
 						"file_type":"json"
 				},
-				"name":"Interest Rate on Required Reserves"
+				"name":"Interest Rate on Required Reserves",
+				"unit":"Percent, %"
 		},
 		"IORB-FRED-D":{
 				"params":{
 						"series_id":"IORB",
 						"file_type":"json"
 				},
-				"name":"Interest Rate on Reserve Balances"
+				"name":"Interest Rate on Reserve Balances",
+				"unit":"Percent, %"
 		},
 		"ONRRP-FRED-D":{
 				"params":{
 						"series_id":"RRPONTSYAWARD",
 						"file_type":"json"
 				},
-				"name":"Overnight Reverse Repurchase Agreements Award Rate"
+				"name":"Overnight Reverse Repurchase Agreements Award Rate",
+				"unit":"Percent, %"
 		},
 		"SREPOMR-FRED-D":{
 				"params":{
 						"series_id":"SRFTSYD",
 						"file_type":"json"
 				},
-				"name":"Standing Repo Facility Minimum Bid Rate"
+				"name":"Standing Repo Facility Minimum Bid Rate",
+				"unit":"Percent, %"
 		},
 		"RECESSION-FRED-D":{
 				"params":{
 						"series_id":"USRECD",
 						"file_type":"json"
 				},
-				"name":"NBER Recession Indicators for the United States"
+				"name":"NBER Recession Indicators for the United States",
+				"unit":""
 		},
 		"FNGDP-FRED-Q":{
 				"params":{
 						"series_id":"NGDPPOT",
 						"file_type":"json"
 				},
-				"name":"Nominal Potential Gross Domestic Product"
+				"name":"Nominal Potential Gross Domestic Product",
+				"unit":"Billions of Dollars, Not Seasonally Adjusted"
 		},
 		"FRGDP-FRED-Q":{
 				"params":{
 						"series_id":"GDPPOT",
 						"file_type":"json"
 				},
-				"name":"Real Potential Gross Domestic Product"
+				"name":"Real Potential Gross Domestic Product",
+				"unit":"Billions of Chained 2017 Dollars, Not Seasonally Adjusted"
 		},
 		"CPIU-FRED-M":{
 				"params":{
 						"series_id":"CPIAUCSL",
 						"file_type":"json"
 				},
-				"name":"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average"
+				"name":"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+				"unit":"Index 1982-1984=100, Seasonally Adjusted"
 		},
 		"CoreCPIU-FRED-M":{
 				"params":{
 						"series_id":"CPILFESL",
 						"file_type":"json"
 				},
-				"name":"Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average"
+				"name":"Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average",
+				"unit":"Index 1982-1984=100, Seasonally Adjusted"
 		},
 		"Chained_CPIU-FRED-M":{
 				"params":{
 						"series_id":"SUUR0000SA0",
 						"file_type":"json"
 				},
-				"name":"Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average"
+				"name":"Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+				"unit":"Index Dec 1999=100, Not Seasonally Adjusted"
 		},
 		"Chained_CoreCPIU-FRED-M":{
 				"params":{
 						"series_id":"SUUR0000SA0L1E",
 						"file_type":"json"
 				},
-				"name":"Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average"
+				"name":"Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average",
+				"unit":"Index Dec 1999=100, Not Seasonally Adjusted"
 		},
 		"RGDP-FRED-Q":{
 				"params":{
 						"series_id":"GDPC1",
 						"file_type":"json"
 				},
-				"name":"Real Gross Domestic Product"
+				"name":"Real Gross Domestic Product",
+				"unit":"Billions of Chained 2017 Dollars, Seasonally Adjusted Annual Rate"
 		},
 		"NRUNEM-FRED-M":{
 				"params":{
 						"series_id":"NROUST",
 						"file_type":"json"
 				},
-				"name":"Natural Rate of Unemployment (Short-Term) (DISCONTINUED)"
+				"name":"Natural Rate of Unemployment (Short-Term) (DISCONTINUED)",
+				"unit":"Percent, %"
 		}
 }
 

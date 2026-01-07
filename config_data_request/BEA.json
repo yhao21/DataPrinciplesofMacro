@@ -10,7 +10,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":true,
-				"name":"Gross Domestic Product"
+				"name":"Gross Domestic Product",
+				"unit":"Billions of dollars, Seasonally Adjusted Annual Rates"
 		},
 		"NGDP-BEA-A":{
 				"params":{
@@ -23,7 +24,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":true,
-				"name":"Gross Domestic Product"
+				"name":"Gross Domestic Product",
+				"unit":"Billions of dollars"
 		},
 		"GDPDeflator-BEA-Q":{
 				"params":{
@@ -36,7 +38,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":"",
-				"name":"GDP Deflator"
+				"name":"GDP Deflator",
+				"unit":"Index 2017=100, Seasonally adjusted"
 		},
 		"GDPDeflator-BEA-A":{
 				"params":{
@@ -49,7 +52,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":"",
-				"name":"GDP Deflator"
+				"name":"GDP Deflator",
+				"unit":"Index 2017=100"
 		},
 		"RGDP-BEA-A":{
 				"params":{
@@ -62,7 +66,8 @@
 				},
 				"drop_cols":["Residual"],
 				"MnToBn":true,
-				"name":"Real Gross Domestic Product"
+				"name":"Real Gross Domestic Product",
+				"unit":"Billions of Chained 2017 Dollars, Seasonally Adjusted"
 		},
 		"PCE-BEA-M":{
 				"params":{
@@ -75,7 +80,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":true,
-				"name":"Personal Consumption Expenditure"
+				"name":"Personal Consumption Expenditure",
+				"unit":"Billions of Dollars, Seasonally Adjusted Annual Rate"
 		},
 		"GDI-BEA-Q":{
 				"params":{
@@ -88,7 +94,8 @@
 				},
 				"drop_cols":[],
 				"MnToBn":true,
-				"name":"Gross Domestic Income"
+				"name":"Gross Domestic Income",
+				"unit":"Billions of Dollars, Seasonally Adjusted Annual Rate"
 		},
 		"GDI-BEA-A":{
 				"params":{
@@ -101,6 +108,7 @@
 				},
 				"drop_cols":[],
 				"MnToBn":true,
-				"name":"Gross Domestic Income"
+				"name":"Gross Domestic Income",
+				"unit":"Billions of Dollars, Seasonally Adjusted"
 		}
 }

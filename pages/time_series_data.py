@@ -16,19 +16,48 @@ from MyTools.frequency_conversion import get_frequency_level
 from MyTools.frequency_conversion import get_YoY_window
 
 
-class Description:
-    def percent():
-        return 'Percent, %'
+class Description_unit():
+    def __init__(self):
+        self.annual_rate = 'Annual Rate'
+        self.seasonally_adj = 'Seasonally Adjusted'
+        self.not_seasonally_adj = 'Not Seasonally Adjusted'
+        self.thousands_persons = 'Thousands of Persons'
+        self.bn = 'Billions of Dollars'
+        self.percent = 'Percent, %'
 
-    def bn_seasonally_adj():
-        return 'Billions of dollars; seasonally adjusted'
+        self.index_2017 = 'Index 2017=100'
+        self.index_1999 = 'Index Dec 1999=100'
+        self.index_1982 = 'Index 1982-1984=100'
 
-    def seasonally_adj():
-        return 'Seasonally adjusted'
+        self.bn_seasonally_adj = f'{self.bn}; {self.seasonally_adj}'
+        self.bn_chained_seasonally_adj = f'Billions of Chained (2017) Dollars; {self.seasonally_adj}'
+        self.thousands_persons_seasonally_adj = f'{self.thousands_persons}; {self.seasonally_adj}'
+        self.thousands_persons_not_seasonally_adj = f'{self.thousands_persons}; {self.not_seasonally_adj}'
 
-    def bn_chained_seasonally_adj():
-        return 'Billions of chained (2017) dollars; seasonally adjusted'
 
+#
+#class Description:
+#    def percent(self):
+#        return 'Percent, %'
+#
+#    def bn_seasonally_adj(self):
+#        return 'Billions of Dollars; seasonally adjusted'
+#
+#    def seasonally_adj(self):
+#        return 'Seasonally Adjusted'
+#
+#    def bn_chained_seasonally_adj(self):
+#        return f'Billions of Chained (2017) Dollars; {self.seasonally_adj()}'
+#
+#    def index_2017(self):
+#        return 'Index 2017=100'
+#
+#    def index_1999(self):
+#        return 'Index Dec 1999=100'
+#
+#    def index_1982(self):
+#        return 'Index 1982-1984=100'
+#
 
 
 
@@ -145,7 +174,6 @@ class show_chart():
         self.data_source()
 
     def data_source(self):
-        #with open('../config/source_info.json')
         with open(os.path.join(self.current_dir, 'config', 'source_info.json')) as f:
             self.data_source = json.load(f)
 
@@ -160,29 +188,29 @@ class show_chart():
 
         
 
-    def show(self, fig_name, chart_config):
+    def show(self, fig_name, chart_config, indent_config):
         """
         This function decides which chart to plot based on the fig_name chose by users.
 
         To show rgdp data, set self.isRGDP = True
         """
         self.chart_config = chart_config
+        self.indent_config = indent_config
+        Description = Description_unit()
+        
 
         ###------National Income------###
         # NGDP
         if fig_name == "Gross domestic product (quarterly)":
             data_name = "NGDP-BEA-Q"
-            #data_source = self.BEA_table_1_1_5
             data_source = self.form_data_source(["BEA(NGDP)"])
-            description = 'Billions of dollars; seasonally adjusted'
-            description = Description.bn_seasonally_adj()
+            description = Description.bn_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Gross domestic product (annual)":
             data_name = "NGDP-BEA-A"
             data_source = self.form_data_source(["BEA(NGDP)"])
-            description = 'Billions of dollars; seasonally adjusted'
-            description = Description.bn_seasonally_adj()
+            description = Description.bn_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         # Percentage share of NGDP
@@ -190,16 +218,14 @@ class show_chart():
             data_name = "NGDP-BEA-Q"
             self.percent_share_GDP = True
             data_source = self.form_data_source(["BEA(NGDP)"])
-            description = 'Percent, %'
-            description = Description.percent()
+            description = Description.percent
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Percentage share of GDP (annual)":
             data_name = "NGDP-BEA-A"
             self.percent_share_GDP = True
             data_source = self.form_data_source(["BEA(NGDP)"])
-            description = 'Percent, %'
-            description = Description.percent()
+            description = Description.percent
             self.show_GDP(data_source, description, data_name)
 
         # RGDP
@@ -207,16 +233,14 @@ class show_chart():
             data_name = "NGDP-BEA-Q"
             self.isRGDP = True
             data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP_Deflator)"])
-            description = f'Billions of chained (2017) dollars; seasonally adjusted'
-            description = Description.bn_chained_seasonally_adj()
+            description = Description.bn_chained_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Real gross domestic product (annual)":
             data_name = "NGDP-BEA-A"
             self.isRGDP = True
             data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP_Deflator)"])
-            description = f'Billions of chained (2017) dollars; seasonally adjusted'
-            description = Description.bn_chained_seasonally_adj()
+            description = Description.bn_chained_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Nominal vs. real GDP":
@@ -227,15 +251,13 @@ class show_chart():
         elif fig_name == "Gross domestic income (quarterly)":
             data_name = "GDI-BEA-Q"
             data_source = self.form_data_source(["BEA(GDI)"])
-            description = 'Billions of dollars; seasonally adjusted'
-            description = Description.bn_seasonally_adj()
+            description = Description.bn_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Gross domestic income (annual)":
             data_name = "GDI-BEA-A"
             data_source = self.form_data_source(["BEA(GDI)"])
-            description = 'Billions of dollars; seasonally adjusted'
-            description = Description.bn_seasonally_adj()
+            description = Description.bn_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
 
@@ -269,7 +291,7 @@ class show_chart():
                 "FRED(Natural Rate of Unemployment)"
                 ])
 
-            description = Description.percent()
+            description = Description.percent
             line_frame(data_name, df, indent_config = {}, description = description, source = data_source, show_zero = True).show(n_legend_cols = 4)
 
 
@@ -289,7 +311,7 @@ class show_chart():
                     ]
             df = merge_data_df(data_list, target_freq = 'M')
             data_source = self.form_data_source(["FRED(Monetary Policy Rates)"])
-            description = 'Percent, %'
+            description = Description.percent
             data_name = f'{fig_name}-FRED-M'
             line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 3)
 
@@ -307,9 +329,54 @@ class show_chart():
                     ]
             df = merge_data_df(data_list, target_freq = 'D')
             data_source = self.form_data_source(["FRED(Monetary Policy Rates)"])
-            description = 'Percent, %'
+            description = Description.percent
             data_name = f'{fig_name}-FRED-D'
             line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 3)
+
+        elif fig_name == "Labor Market Level":
+            data_list = [
+                    "CNP-FRED-M",
+                    "CLF-FRED-M",
+                    "NIL-FRED-M",
+                    "EMP-FRED-M",
+                    "UNEMP-FRED-M"
+                    ]
+            df = merge_data_df(data_list, target_freq = 'M')
+            data_source = self.form_data_source([
+                "FRED(Civilian Noninstitutional Population)",
+                "FRED(Civilian Labor Force Level)",
+                "FRED(Not in Labor Force)",
+                "FRED(Employment Level)",
+                "FRED(Unemployment Level)"
+                ])
+            description = Description.thousands_persons_seasonally_adj
+            data_name = f'{fig_name}-FRED-M'
+            line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 5)
+
+        elif fig_name == 'Labor Market Rate':
+            data_list = [
+                    "LFPR-FRED-M",
+                    "UNRATE-FRED-M",
+                    "U1-FRED-M",
+                    "U2-FRED-M",
+                    "U4-FRED-M",
+                    "U5-FRED-M",
+                    "U6-FRED-M",
+                    ]
+            df = merge_data_df(data_list, target_freq = 'M')
+            data_source = self.form_data_source([
+                    "FRED(Labor Force Participation Rate)",
+                    "FRED(Unemployment Rate)",
+                    "FRED(U-1)",
+                    "FRED(U-2)",
+                    "FRED(U-4)",
+                    "FRED(U-5)",
+                    "FRED(U-6)",
+                ])
+            description = Description.percent
+            data_name = f'{fig_name}-FRED-M'
+            line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 3)
+
 
 
     def get_df(self, data_name):
@@ -335,7 +402,7 @@ class show_chart():
 
     def show_GDP(self, data_source, description, data_name):
 
-        indent_config = self.chart_config[data_name[:-2]]
+        indent_config = self.indent_config[data_name[:-2]]
         df, data_name = self.get_df(data_name)
 
         line_frame(data_name, df, indent_config = indent_config, description = description, source = data_source).show()
@@ -377,6 +444,10 @@ chart_height = chart.get_chart_height(chart_config['chart']['WHratio'], chart_wi
 iframe_height = chart_height + 30
 
 
+###------indent config------###
+with open(os.path.join(current_dir, 'config', 'indent_config.json')) as f:
+    indent_config = json.load(f)
+
 
 ##############################
 # Main Content
@@ -403,6 +474,10 @@ fig_list = [
     "Gross domestic income (quarterly)",
     "Gross domestic income (annual)",
 
+    ###------Unemployment------###
+    "Labor Market Level",
+    "Labor Market Rate",
+
 
     ###------AD/AS------###
     "Business cycle and AD/AS model",
@@ -417,7 +492,7 @@ fig_list = [
 fig_name = st.selectbox('Choose a dataset to display:', fig_list)
 st.divider()
 
-show_chart().show(fig_name, chart_config)
+show_chart().show(fig_name, chart_config, indent_config)
 
 
 
