@@ -3,7 +3,6 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import json, os, warnings
-import vl_convert as vlc
 
 from MyTools.frequency_conversion import get_available_freq_list
 from MyTools.frequency_conversion import frequency_dict
