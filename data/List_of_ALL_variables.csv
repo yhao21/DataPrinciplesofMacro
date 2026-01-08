@@ -58,7 +58,7 @@ Start Period,End Period,col_name,csv_name,Data Series
 1948-01-01,2025-11-01,Population Level,CNP-FRED-M.csv,[M] Population Level
 1948-01-01,2025-11-01,Unemployment Level,UNEMP-FRED-M.csv,[M] Unemployment Level
 1949Q1,2035Q4,Real Potential Gross Domestic Product,FRGDP-FRED-Q.csv,[Q] Real Potential Gross Domestic Product
-2008-12-16,2026-01-07,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
+2008-12-16,2026-01-08,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
 1959-01,2025-09,Personal consumption expenditures (PCE),PCE-BEA-M.csv,[M] Personal consumption expenditures (PCE) IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Goods,PCE-BEA-M.csv,[M] Goods IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Durable goods,PCE-BEA-M.csv,[M] [Durable goods] UNDER [Goods] IN DATASET [Personal consumption expenditures (PCE)]
@@ -95,7 +95,6 @@ Start Period,End Period,col_name,csv_name,Data Series
 2021-07-29,2026-01-08,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
 1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Chained_CPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
 1949Q1,2035Q4,Nominal Potential Gross Domestic Product,FNGDP-FRED-Q.csv,[Q] Nominal Potential Gross Domestic Product
-1947-04-01,2025-07-01,Gross Domestic Product: Implicit Price Deflator,GDPDeflator-FRED-M.csv,[M] Gross Domestic Product: Implicit Price Deflator
 1948-01-01,2025-11-01,Employment Level,EMP-FRED-M.csv,[M] Employment Level
 1957-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,CoreCPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
 1967-01-01,2025-11-01,Unemployment Rate - Job Losers (U-2),U2-FRED-M.csv,[M] Unemployment Rate - Job Losers (U-2)
@@ -124,9 +123,9 @@ Start Period,End Period,col_name,csv_name,Data Series
 1947Q1,2025Q3,Nondefense,NGDP-BEA-Q.csv,[Q] [Nondefense] UNDER [Federal] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,State and local,NGDP-BEA-Q.csv,[Q] [State and local] UNDER [Government consumption expenditures and gross investment] IN DATASET [Gross domestic product]
 1948-01-01,2025-11-01,Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1),U1-FRED-M.csv,[M] Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1)
-1854-12-01,2026-01-05,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
+1854-12-01,2026-01-06,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
 1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,Chained_CoreCPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
-2008-12-16,2026-01-07,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
+2008-12-16,2026-01-08,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
 1948-01-01,2025-11-01,Labor Force Participation Rate,LFPR-FRED-M.csv,[M] Labor Force Participation Rate
 1947Q1,2025Q3,Gross domestic income,GDI-BEA-Q.csv,[Q] Gross domestic income IN DATASET [Gross domestic income]
 1947Q1,2025Q3,"Compensation of employees, paid",GDI-BEA-Q.csv,"[Q] Compensation of employees, paid IN DATASET [Gross domestic income]"

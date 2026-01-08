@@ -4,6 +4,8 @@ import request_data
 from pathlib import Path
 import pandas as pd
 
+from MyTools.database import DataCollection
+
 
 def get_data_params(file_name, add_new_data_seires, path_data_parse):
     """
@@ -150,7 +152,8 @@ path_data_parse = os.path.join('data', 'parse_data')
 Path(path_data_request).mkdir(exist_ok=True, parents = True)
 Path(path_data_parse).mkdir(exist_ok=True, parents = True)
 
-path_variables = './variables_in_database.csv'
+#path_variables = './variables_in_database.csv'
+path_variables = os.path.join('data', 'variables_in_database.csv')
 #===========================================
 
 
@@ -166,7 +169,12 @@ path_variables = './variables_in_database.csv'
 """
 Run this to request and update your database.
 """
+# Step 1: Download and parse data from websites
 update_database(path_data_request, path_data_parse, path_variables, computer, override, add_new_data_seires)
+# Step 2: Update data list
+DataCollection().update_data_series(path_data_parse)
+
+
 
 
 ###------Check data series in database------###
@@ -175,8 +183,8 @@ db = pd.read_csv(path_variables, index_col = 0).sort_values('variable')
 print("\nData series in the database:")
 print(db.to_string())
 
-db = db.query('platform == "FRED"')
-print(db.to_string())
+#db = db.query('platform == "FRED"')
+#print(db.to_string())
 
 
 
