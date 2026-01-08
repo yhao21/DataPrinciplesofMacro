@@ -95,6 +95,7 @@ Start Period,End Period,col_name,csv_name,Data Series
 2021-07-29,2026-01-08,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
 1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Chained_CPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
 1949Q1,2035Q4,Nominal Potential Gross Domestic Product,FNGDP-FRED-Q.csv,[Q] Nominal Potential Gross Domestic Product
+1947-04-01,2025-07-01,Gross Domestic Product: Implicit Price Deflator,GDPDeflator-FRED-M.csv,[M] Gross Domestic Product: Implicit Price Deflator
 1948-01-01,2025-11-01,Employment Level,EMP-FRED-M.csv,[M] Employment Level
 1957-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,CoreCPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
 1967-01-01,2025-11-01,Unemployment Rate - Job Losers (U-2),U2-FRED-M.csv,[M] Unemployment Rate - Job Losers (U-2)
@@ -156,6 +157,7 @@ Start Period,End Period,col_name,csv_name,Data Series
 2003-01-09,2026-01-06,Discount Window Primary Credit Rate,DISCOUNTPRIMARY-FRED-D.csv,[D] Discount Window Primary Credit Rate
 2013-09-23,2026-01-07,Overnight Reverse Repurchase Agreements Award Rate,ONRRP-FRED-D.csv,[D] Overnight Reverse Repurchase Agreements Award Rate
 1948-01-01,2025-11-01,Civilian Labor Force Level,CLF-FRED-M.csv,[M] Civilian Labor Force Level
+1959-01-01,2025-09-01,Personal Consumption Expenditures,PCE-FRED-M.csv,[M] Personal Consumption Expenditures
 1982-09-27,2008-12-15,Federal Funds Target Rate (DISCONTINUED),FFRT-FRED-D.csv,[D] Federal Funds Target Rate (DISCONTINUED)
 1994-01-01,2025-11-01,"Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)",U4-FRED-M.csv,"[M] Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)"
 1975-01-01,2025-11-01,Not in Labor Force,NIL-FRED-M.csv,[M] Not in Labor Force

@@ -37,3 +37,5 @@ EMP-FRED-M,Employment Level,FRED,M
 UNEMP-FRED-M,Unemployment Level,FRED,M
 CLF-FRED-M,Civilian Labor Force Level,FRED,M
 NIL-FRED-M,Not in Labor Force,FRED,M
+PCE-FRED-M,Personal Consumption Expenditures,FRED,M
+GDPDeflator-FRED-M,GDP Deflator,FRED,M

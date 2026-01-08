@@ -196,7 +196,7 @@
 						"series_id":"CPIAUCSL",
 						"file_type":"json"
 				},
-				"name":"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+				"name":"CPI-U",
 				"unit":"Index 1982-1984=100, Seasonally Adjusted"
 		},
 		"CoreCPIU-FRED-M":{
@@ -204,7 +204,7 @@
 						"series_id":"CPILFESL",
 						"file_type":"json"
 				},
-				"name":"Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average",
+				"name":"Core CPI-U",
 				"unit":"Index 1982-1984=100, Seasonally Adjusted"
 		},
 		"Chained_CPIU-FRED-M":{
@@ -212,7 +212,7 @@
 						"series_id":"SUUR0000SA0",
 						"file_type":"json"
 				},
-				"name":"Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+				"name":"Chained CPI-U",
 				"unit":"Index Dec 1999=100, Not Seasonally Adjusted"
 		},
 		"Chained_CoreCPIU-FRED-M":{
@@ -220,8 +220,16 @@
 						"series_id":"SUUR0000SA0L1E",
 						"file_type":"json"
 				},
-				"name":"Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average",
+				"name":"Chained Core CPI-U",
 				"unit":"Index Dec 1999=100, Not Seasonally Adjusted"
+		},
+		"PCE-FRED-M":{
+				"params":{
+						"series_id":"PCE",
+						"file_type":"json"
+				},
+				"name":"Personal Consumption Expenditures",
+				"unit":"Billions of Dollars, Seasonally Adjusted Annual Rate"
 		},
 		"RGDP-FRED-Q":{
 				"params":{

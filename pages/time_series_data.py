@@ -35,29 +35,6 @@ class Description_unit():
         self.thousands_persons_not_seasonally_adj = f'{self.thousands_persons}; {self.not_seasonally_adj}'
 
 
-#
-#class Description:
-#    def percent(self):
-#        return 'Percent, %'
-#
-#    def bn_seasonally_adj(self):
-#        return 'Billions of Dollars; seasonally adjusted'
-#
-#    def seasonally_adj(self):
-#        return 'Seasonally Adjusted'
-#
-#    def bn_chained_seasonally_adj(self):
-#        return f'Billions of Chained (2017) Dollars; {self.seasonally_adj()}'
-#
-#    def index_2017(self):
-#        return 'Index 2017=100'
-#
-#    def index_1999(self):
-#        return 'Index Dec 1999=100'
-#
-#    def index_1982(self):
-#        return 'Index 1982-1984=100'
-#
 
 
 
@@ -130,33 +107,6 @@ def merge_data_df(data_name_list:list, target_freq = 'D', return_freq = False):
 
 
 
-#
-#def merge_data_df(data_name_list:list, target_freq = ''):
-#    """
-#    For each data_name in data_name_list:
-#        1. Load corresponding df named <data_name.csv> in directory parse_data.
-#            -- Use "Time" column as index, and drop "Time" column.
-#        2. Merge all dfs.
-#            -- You must make sure that data in all dfs are measured in the same frequency, such as daily, monthly, quarterly...
-#    """
-#    result = pd.DataFrame()
-#    for data_name in data_name_list:
-#        df = pd.read_csv(os.path.join('data', 'parse_data', f'{data_name}.csv'), index_col = 'Time')
-#        result = pd.concat([result, df], axis = 1)
-#
-#
-#    # Convert "Time" index to datetime type, then sort value from past to the present.
-#    result.index = pd.to_datetime(result.index)
-#    result = result.sort_index()
-#    result['Time'] = result.index
-#
-#    if target_freq:
-#        result = convert_frequency(result, target_freq)
-#    print(result)
-#
-#    return result
-#
-
 
 
 class show_chart():
@@ -176,6 +126,11 @@ class show_chart():
     def data_source(self):
         with open(os.path.join(self.current_dir, 'config', 'source_info.json')) as f:
             self.data_source = json.load(f)
+
+    def data_info_FRED(self):
+        with open(os.path.join(self.current_dir, 'config_data_request', 'FRED.json')) as f:
+            info_FRED = json.load(f)
+        return info_FRED
 
 
     def form_data_source(self, item_names:list):
@@ -197,6 +152,8 @@ class show_chart():
         self.chart_config = chart_config
         self.indent_config = indent_config
         Description = Description_unit()
+
+        dataset_info_FRED = self.data_info_FRED()
         
 
         ###------National Income------###
@@ -232,14 +189,14 @@ class show_chart():
         elif fig_name == "Real gross domestic product (quarterly)":
             data_name = "NGDP-BEA-Q"
             self.isRGDP = True
-            data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP_Deflator)"])
+            data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP Deflator)"])
             description = Description.bn_chained_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
         elif fig_name == "Real gross domestic product (annual)":
             data_name = "NGDP-BEA-A"
             self.isRGDP = True
-            data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP_Deflator)"])
+            data_source = self.form_data_source(["BEA(NGDP)", "BEA(GDP Deflator)"])
             description = Description.bn_chained_seasonally_adj
             self.show_GDP(data_source, description, data_name)
 
@@ -286,7 +243,7 @@ class show_chart():
             data_source = self.form_data_source([
                 "FRED(RGDP)",
                 "FRED(Real Potential GDP)",
-                "FRED(CPI)",
+                "BEA(GDP Deflator)",
                 "FRED(Unemployment Rate)",
                 "FRED(Natural Rate of Unemployment)"
                 ])
@@ -342,6 +299,11 @@ class show_chart():
                     "UNEMP-FRED-M"
                     ]
             df = merge_data_df(data_list, target_freq = 'M')
+
+            # Use simplified column names
+            cols = ['Time'] + [dataset_info_FRED[i]['name'] for i in data_list]
+            df.columns = cols
+
             data_source = self.form_data_source([
                 "FRED(Civilian Noninstitutional Population)",
                 "FRED(Civilian Labor Force Level)",
@@ -364,6 +326,11 @@ class show_chart():
                     "U6-FRED-M",
                     ]
             df = merge_data_df(data_list, target_freq = 'M')
+
+            # Use simplified column names
+            cols = ['Time'] + [dataset_info_FRED[i]['name'] for i in data_list]
+            df.columns = cols
+
             data_source = self.form_data_source([
                     "FRED(Labor Force Participation Rate)",
                     "FRED(Unemployment Rate)",
@@ -375,7 +342,32 @@ class show_chart():
                 ])
             description = Description.percent
             data_name = f'{fig_name}-FRED-M'
-            line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 3)
+            line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 5)
+
+        elif fig_name == "Measures of Price Level":
+            data_list = [
+                    "CPIU-FRED-M",
+                    "CoreCPIU-FRED-M",
+                    "Chained_CPIU-FRED-M",
+                    "Chained_CoreCPIU-FRED-M",
+                    "PCE-FRED-M"
+                    ]
+            df = merge_data_df(data_list, target_freq = 'M')
+
+            # Use simplified column names
+            cols = ['Time'] + [dataset_info_FRED[i]['name'] for i in data_list]
+            df.columns = cols
+
+            data_source = self.form_data_source([
+                "FRED(CPI)",
+		"FRED(Core CPI)",
+		"FRED(Chained CPI)",
+		"FRED(Chained Core CPI)",
+                "FRED(Personal Consumption Expenditure)"
+                ])
+            description = f'{Description.index_1982} (CPIs), {Description.index_1999} (Chained CPIs), {Description.bn_seasonally_adj} (PCE)'
+            data_name = f'{fig_name}-FRED-M'
+            line_frame(data_name, df, indent_config = {}, description = description, source = data_source).show(n_legend_cols = 5)
 
 
 
@@ -477,6 +469,9 @@ fig_list = [
     ###------Unemployment------###
     "Labor Market Level",
     "Labor Market Rate",
+
+    ###------Price Index------###
+    "Measures of Price Level",
 
 
     ###------AD/AS------###
