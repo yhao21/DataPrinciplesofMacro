@@ -1,31 +1,7 @@
 Start Period,End Period,col_name,csv_name,Data Series
-1954-07-01,2026-01-06,Federal Funds Effective Rate,FFER-FRED-D.csv,[D] Federal Funds Effective Rate
-1994-01-01,2025-11-01,"Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)",U5-FRED-M.csv,"[M] Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)"
-1929,2024,Gross domestic income,GDI-BEA-A.csv,[A] Gross domestic income IN DATASET [Gross domestic income]
-1929,2024,"Compensation of employees, paid",GDI-BEA-A.csv,"[A] Compensation of employees, paid IN DATASET [Gross domestic income]"
-1929,2024,Wages and salaries,GDI-BEA-A.csv,"[A] [Wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
-1929,2024,To persons,GDI-BEA-A.csv,[A] [To persons] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
-1929,2024,To the rest of the world,GDI-BEA-A.csv,[A] [To the rest of the world] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
-1929,2024,Supplements to wages and salaries,GDI-BEA-A.csv,"[A] [Supplements to wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
-1929,2024,Taxes on production and imports,GDI-BEA-A.csv,[A] Taxes on production and imports IN DATASET [Gross domestic income]
-1929,2024,Less: Subsidies,GDI-BEA-A.csv,[A] Less: Subsidies IN DATASET [Gross domestic income]
-1929,2024,Net operating surplus,GDI-BEA-A.csv,[A] Net operating surplus IN DATASET [Gross domestic income]
-1929,2024,Private enterprises,GDI-BEA-A.csv,[A] [Private enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1929,2024,"Net interest and miscellaneous payments, domestic industries",GDI-BEA-A.csv,"[A] [Net interest and miscellaneous payments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
-1929,2024,Business current transfer payments (net),GDI-BEA-A.csv,[A] [Business current transfer payments (net)] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1929,2024,Proprietors' income with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,[A] [Proprietors' income with inventory valuation and capital consumption adjustments] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1929,2024,Rental income of persons with capital consumption adjustment,GDI-BEA-A.csv,[A] [Rental income of persons with capital consumption adjustment] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1929,2024,"Corporate profits with inventory valuation and capital consumption adjustments, domestic industries",GDI-BEA-A.csv,"[A] [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
-1929,2024,Taxes on corporate income,GDI-BEA-A.csv,"[A] [Taxes on corporate income] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
-1929,2024,Profits after tax with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,"[A] [Profits after tax with inventory valuation and capital consumption adjustments] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
-1929,2024,Net dividends,GDI-BEA-A.csv,[A] [Net dividends] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
-1929,2024,Undistributed corporate profits with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,[A] [Undistributed corporate profits with inventory valuation and capital consumption adjustments] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
-1929,2024,Current surplus of government enterprises,GDI-BEA-A.csv,[A] [Current surplus of government enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1929,2024,Consumption of fixed capital,GDI-BEA-A.csv,[A] Consumption of fixed capital IN DATASET [Gross domestic income]
-1929,2024,Private,GDI-BEA-A.csv,[A] [Private] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
-1929,2024,Government,GDI-BEA-A.csv,[A] [Government] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
-1929,2024,Statistical discrepancy,GDI-BEA-A.csv,[A] Statistical discrepancy IN DATASET [Gross domestic income]
-1948-01-01,2025-11-01,Unemployment Rate,UNRATE-FRED-M.csv,[M] Unemployment Rate
+1948-01-01,2025-11-01,Unemployment Level,UNEMP-FRED-M.csv,[M] Unemployment Level
+2013-09-23,2026-01-09,Overnight Reverse Repurchase Agreements Award Rate,ONRRP-FRED-D.csv,[D] Overnight Reverse Repurchase Agreements Award Rate
+1854-12-01,2026-01-08,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
 1929,2024,Gross domestic product,RGDP-BEA-A.csv,[A] Gross domestic product IN DATASET [Gross domestic product]
 1929,2024,Personal consumption expenditures,RGDP-BEA-A.csv,[A] Personal consumption expenditures IN DATASET [Gross domestic product]
 1929,2024,Goods,RGDP-BEA-A.csv,[A] [Goods] UNDER [Personal consumption expenditures] IN DATASET [Gross domestic product]
@@ -39,8 +15,6 @@ Start Period,End Period,col_name,csv_name,Data Series
 1929,2024,Equipment,RGDP-BEA-A.csv,[A] [Equipment] UNDER [Nonresidential] IN DATASET [Gross domestic product]
 1929,2024,Intellectual property products,RGDP-BEA-A.csv,[A] [Intellectual property products] UNDER [Nonresidential] IN DATASET [Gross domestic product]
 1929,2024,Residential,RGDP-BEA-A.csv,[A] [Residential] UNDER [Fixed investment] IN DATASET [Gross domestic product]
-1929,2024,Change in private inventories,RGDP-BEA-A.csv,[A] [Change in private inventories] UNDER [Gross private domestic investment] IN DATASET [Gross domestic product]
-1929,2024,Net exports of goods and services,RGDP-BEA-A.csv,[A] Net exports of goods and services IN DATASET [Gross domestic product]
 1929,2024,Exports,RGDP-BEA-A.csv,[A] [Exports] UNDER [Net exports of goods and services] IN DATASET [Gross domestic product]
 1929,2024,Goods.1,RGDP-BEA-A.csv,[A] [Goods.1] UNDER [Exports] IN DATASET [Gross domestic product]
 1929,2024,Services.1,RGDP-BEA-A.csv,[A] [Services.1] UNDER [Exports] IN DATASET [Gross domestic product]
@@ -52,13 +26,43 @@ Start Period,End Period,col_name,csv_name,Data Series
 1929,2024,National defense,RGDP-BEA-A.csv,[A] [National defense] UNDER [Federal] IN DATASET [Gross domestic product]
 1929,2024,Nondefense,RGDP-BEA-A.csv,[A] [Nondefense] UNDER [Federal] IN DATASET [Gross domestic product]
 1929,2024,State and local,RGDP-BEA-A.csv,[A] [State and local] UNDER [Government consumption expenditures and gross investment] IN DATASET [Gross domestic product]
+1967-01-01,2025-11-01,Unemployment Rate - Job Losers (U-2),U2-FRED-M.csv,[M] Unemployment Rate - Job Losers (U-2)
+2021-07-29,2026-01-09,Standing Repo Facility Minimum Bid Rate,SREPOMR-FRED-D.csv,[D] Standing Repo Facility Minimum Bid Rate
 2008-10-09,2021-07-28,Interest Rate on Required Reserves (IORR Rate) (DISCONTINUED),IORR-FRED-D.csv,[D] Interest Rate on Required Reserves (IORR Rate) (DISCONTINUED)
-1994-01-01,2025-11-01,"Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)",U6-FRED-M.csv,"[M] Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)"
-1949-01-01,2031-10-01,Natural Rate of Unemployment (Short-Term) (DISCONTINUED),NRUNEM-FRED-M.csv,[M] Natural Rate of Unemployment (Short-Term) (DISCONTINUED)
-1948-01-01,2025-11-01,Population Level,CNP-FRED-M.csv,[M] Population Level
-1948-01-01,2025-11-01,Unemployment Level,UNEMP-FRED-M.csv,[M] Unemployment Level
+1947Q1,2025Q3,Gross domestic income,GDI-BEA-Q.csv,[Q] Gross domestic income IN DATASET [Gross domestic income]
+1947Q1,2025Q3,"Compensation of employees, paid",GDI-BEA-Q.csv,"[Q] Compensation of employees, paid IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Wages and salaries,GDI-BEA-Q.csv,"[Q] [Wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,To persons,GDI-BEA-Q.csv,[Q] [To persons] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,To the rest of the world,GDI-BEA-Q.csv,[Q] [To the rest of the world] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Supplements to wages and salaries,GDI-BEA-Q.csv,"[Q] [Supplements to wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Taxes on production and imports,GDI-BEA-Q.csv,[Q] Taxes on production and imports IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Less: Subsidies,GDI-BEA-Q.csv,[Q] Less: Subsidies IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Net operating surplus,GDI-BEA-Q.csv,[Q] Net operating surplus IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Private enterprises,GDI-BEA-Q.csv,[Q] [Private enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,"Net interest and miscellaneous payments, domestic industries",GDI-BEA-Q.csv,"[Q] [Net interest and miscellaneous payments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Business current transfer payments (net),GDI-BEA-Q.csv,[Q] [Business current transfer payments (net)] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Proprietors' income with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,[Q] [Proprietors' income with inventory valuation and capital consumption adjustments] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Rental income of persons with capital consumption adjustment,GDI-BEA-Q.csv,[Q] [Rental income of persons with capital consumption adjustment] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,"Corporate profits with inventory valuation and capital consumption adjustments, domestic industries",GDI-BEA-Q.csv,"[Q] [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Taxes on corporate income,GDI-BEA-Q.csv,"[Q] [Taxes on corporate income] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Profits after tax with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,"[Q] [Profits after tax with inventory valuation and capital consumption adjustments] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
+1947Q1,2025Q3,Net dividends,GDI-BEA-Q.csv,[Q] [Net dividends] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Undistributed corporate profits with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,[Q] [Undistributed corporate profits with inventory valuation and capital consumption adjustments] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Current surplus of government enterprises,GDI-BEA-Q.csv,[Q] [Current surplus of government enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Consumption of fixed capital,GDI-BEA-Q.csv,[Q] Consumption of fixed capital IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Private,GDI-BEA-Q.csv,[Q] [Private] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Government,GDI-BEA-Q.csv,[Q] [Government] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
+1947Q1,2025Q3,Statistical discrepancy,GDI-BEA-Q.csv,[Q] Statistical discrepancy IN DATASET [Gross domestic income]
+1994-01-01,2025-11-01,"Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)",U4-FRED-M.csv,"[M] Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)"
+1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Chained_CPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+2008-12-16,2026-01-11,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
+1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,Chained_CoreCPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
+1957-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,CoreCPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
+1947Q1,2025Q3,Real Gross Domestic Product,RGDP-FRED-Q.csv,[Q] Real Gross Domestic Product
 1949Q1,2035Q4,Real Potential Gross Domestic Product,FRGDP-FRED-Q.csv,[Q] Real Potential Gross Domestic Product
-2008-12-16,2026-01-08,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
+1994-01-01,2025-11-01,"Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)",U6-FRED-M.csv,"[M] Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)"
+1994-01-01,2025-11-01,"Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)",U5-FRED-M.csv,"[M] Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)"
+2003-01-09,2026-01-08,Discount Window Primary Credit Rate,DISCOUNTPRIMARY-FRED-D.csv,[D] Discount Window Primary Credit Rate
 1959-01,2025-09,Personal consumption expenditures (PCE),PCE-BEA-M.csv,[M] Personal consumption expenditures (PCE) IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Goods,PCE-BEA-M.csv,[M] Goods IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Durable goods,PCE-BEA-M.csv,[M] [Durable goods] UNDER [Goods] IN DATASET [Personal consumption expenditures (PCE)]
@@ -90,14 +94,17 @@ Start Period,End Period,col_name,csv_name,Data Series
 1959-01,2025-09,Housing,PCE-BEA-M.csv,[M] Housing IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Market-based PCE,PCE-BEA-M.csv,[M] Market-based PCE IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Market-based PCE excluding food and energy,PCE-BEA-M.csv,[M] Market-based PCE excluding food and energy IN DATASET [Personal consumption expenditures (PCE)]
-1947Q1,2025Q3,Real Gross Domestic Product,RGDP-FRED-Q.csv,[Q] Real Gross Domestic Product
-2021-07-29,2026-01-07,Standing Repo Facility Minimum Bid Rate,SREPOMR-FRED-D.csv,[D] Standing Repo Facility Minimum Bid Rate
-2021-07-29,2026-01-08,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
-1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Chained_CPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+2008-12-16,2026-01-11,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
+1949-01-01,2031-10-01,Natural Rate of Unemployment (Short-Term) (DISCONTINUED),NRUNEM-FRED-M.csv,[M] Natural Rate of Unemployment (Short-Term) (DISCONTINUED)
+1948-01-01,2025-11-01,Civilian Labor Force Level,CLF-FRED-M.csv,[M] Civilian Labor Force Level
+1975-01-01,2025-11-01,Not in Labor Force,NIL-FRED-M.csv,[M] Not in Labor Force
 1949Q1,2035Q4,Nominal Potential Gross Domestic Product,FNGDP-FRED-Q.csv,[Q] Nominal Potential Gross Domestic Product
-1948-01-01,2025-11-01,Employment Level,EMP-FRED-M.csv,[M] Employment Level
-1957-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,CoreCPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
-1967-01-01,2025-11-01,Unemployment Rate - Job Losers (U-2),U2-FRED-M.csv,[M] Unemployment Rate - Job Losers (U-2)
+2021-07-29,2026-01-12,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
+1982-09-27,2008-12-15,Federal Funds Target Rate (DISCONTINUED),FFRT-FRED-D.csv,[D] Federal Funds Target Rate (DISCONTINUED)
+1948-01-01,2025-11-01,Labor Force Participation Rate,LFPR-FRED-M.csv,[M] Labor Force Participation Rate
+1948-01-01,2025-11-01,Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1),U1-FRED-M.csv,[M] Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1)
+1929,2024,Change in private inventories,RGDP-BEA-A.csv,[A] [Change in private inventories] UNDER [Gross private domestic investment] IN DATASET [Gross domestic product]
+1929,2024,Net exports of goods and services,RGDP-BEA-A.csv,[A] Net exports of goods and services IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Gross domestic product,NGDP-BEA-Q.csv,[Q] Gross domestic product IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Personal consumption expenditures,NGDP-BEA-Q.csv,[Q] Personal consumption expenditures IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Goods,NGDP-BEA-Q.csv,[Q] [Goods] UNDER [Personal consumption expenditures] IN DATASET [Gross domestic product]
@@ -122,42 +129,35 @@ Start Period,End Period,col_name,csv_name,Data Series
 1947Q1,2025Q3,National defense,NGDP-BEA-Q.csv,[Q] [National defense] UNDER [Federal] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Nondefense,NGDP-BEA-Q.csv,[Q] [Nondefense] UNDER [Federal] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,State and local,NGDP-BEA-Q.csv,[Q] [State and local] UNDER [Government consumption expenditures and gross investment] IN DATASET [Gross domestic product]
-1948-01-01,2025-11-01,Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1),U1-FRED-M.csv,[M] Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1)
-1854-12-01,2026-01-06,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
-1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,Chained_CoreCPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
-2008-12-16,2026-01-08,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
-1948-01-01,2025-11-01,Labor Force Participation Rate,LFPR-FRED-M.csv,[M] Labor Force Participation Rate
-1947Q1,2025Q3,Gross domestic income,GDI-BEA-Q.csv,[Q] Gross domestic income IN DATASET [Gross domestic income]
-1947Q1,2025Q3,"Compensation of employees, paid",GDI-BEA-Q.csv,"[Q] Compensation of employees, paid IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Wages and salaries,GDI-BEA-Q.csv,"[Q] [Wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,To persons,GDI-BEA-Q.csv,[Q] [To persons] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,To the rest of the world,GDI-BEA-Q.csv,[Q] [To the rest of the world] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Supplements to wages and salaries,GDI-BEA-Q.csv,"[Q] [Supplements to wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Taxes on production and imports,GDI-BEA-Q.csv,[Q] Taxes on production and imports IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Less: Subsidies,GDI-BEA-Q.csv,[Q] Less: Subsidies IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Net operating surplus,GDI-BEA-Q.csv,[Q] Net operating surplus IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Private enterprises,GDI-BEA-Q.csv,[Q] [Private enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,"Net interest and miscellaneous payments, domestic industries",GDI-BEA-Q.csv,"[Q] [Net interest and miscellaneous payments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Business current transfer payments (net),GDI-BEA-Q.csv,[Q] [Business current transfer payments (net)] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Proprietors' income with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,[Q] [Proprietors' income with inventory valuation and capital consumption adjustments] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Rental income of persons with capital consumption adjustment,GDI-BEA-Q.csv,[Q] [Rental income of persons with capital consumption adjustment] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,"Corporate profits with inventory valuation and capital consumption adjustments, domestic industries",GDI-BEA-Q.csv,"[Q] [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Taxes on corporate income,GDI-BEA-Q.csv,"[Q] [Taxes on corporate income] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Profits after tax with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,"[Q] [Profits after tax with inventory valuation and capital consumption adjustments] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
-1947Q1,2025Q3,Net dividends,GDI-BEA-Q.csv,[Q] [Net dividends] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Undistributed corporate profits with inventory valuation and capital consumption adjustments,GDI-BEA-Q.csv,[Q] [Undistributed corporate profits with inventory valuation and capital consumption adjustments] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Current surplus of government enterprises,GDI-BEA-Q.csv,[Q] [Current surplus of government enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Consumption of fixed capital,GDI-BEA-Q.csv,[Q] Consumption of fixed capital IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Private,GDI-BEA-Q.csv,[Q] [Private] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Government,GDI-BEA-Q.csv,[Q] [Government] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
-1947Q1,2025Q3,Statistical discrepancy,GDI-BEA-Q.csv,[Q] Statistical discrepancy IN DATASET [Gross domestic income]
+1954-07-01,2026-01-08,Federal Funds Effective Rate,FFER-FRED-D.csv,[D] Federal Funds Effective Rate
+1929,2024,Gross domestic income,GDI-BEA-A.csv,[A] Gross domestic income IN DATASET [Gross domestic income]
+1929,2024,"Compensation of employees, paid",GDI-BEA-A.csv,"[A] Compensation of employees, paid IN DATASET [Gross domestic income]"
+1929,2024,Wages and salaries,GDI-BEA-A.csv,"[A] [Wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
+1929,2024,To persons,GDI-BEA-A.csv,[A] [To persons] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
+1929,2024,To the rest of the world,GDI-BEA-A.csv,[A] [To the rest of the world] UNDER [Wages and salaries] IN DATASET [Gross domestic income]
+1929,2024,Supplements to wages and salaries,GDI-BEA-A.csv,"[A] [Supplements to wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
+1929,2024,Taxes on production and imports,GDI-BEA-A.csv,[A] Taxes on production and imports IN DATASET [Gross domestic income]
+1929,2024,Less: Subsidies,GDI-BEA-A.csv,[A] Less: Subsidies IN DATASET [Gross domestic income]
+1929,2024,Net operating surplus,GDI-BEA-A.csv,[A] Net operating surplus IN DATASET [Gross domestic income]
+1929,2024,Private enterprises,GDI-BEA-A.csv,[A] [Private enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1929,2024,"Net interest and miscellaneous payments, domestic industries",GDI-BEA-A.csv,"[A] [Net interest and miscellaneous payments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
+1929,2024,Business current transfer payments (net),GDI-BEA-A.csv,[A] [Business current transfer payments (net)] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1929,2024,Proprietors' income with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,[A] [Proprietors' income with inventory valuation and capital consumption adjustments] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1929,2024,Rental income of persons with capital consumption adjustment,GDI-BEA-A.csv,[A] [Rental income of persons with capital consumption adjustment] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1929,2024,"Corporate profits with inventory valuation and capital consumption adjustments, domestic industries",GDI-BEA-A.csv,"[A] [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] UNDER [Net operating surplus] IN DATASET [Gross domestic income]"
+1929,2024,Taxes on corporate income,GDI-BEA-A.csv,"[A] [Taxes on corporate income] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
+1929,2024,Profits after tax with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,"[A] [Profits after tax with inventory valuation and capital consumption adjustments] UNDER [Corporate profits with inventory valuation and capital consumption adjustments, domestic industries] IN DATASET [Gross domestic income]"
+1929,2024,Net dividends,GDI-BEA-A.csv,[A] [Net dividends] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
+1929,2024,Undistributed corporate profits with inventory valuation and capital consumption adjustments,GDI-BEA-A.csv,[A] [Undistributed corporate profits with inventory valuation and capital consumption adjustments] UNDER [Profits after tax with inventory valuation and capital consumption adjustments] IN DATASET [Gross domestic income]
+1929,2024,Current surplus of government enterprises,GDI-BEA-A.csv,[A] [Current surplus of government enterprises] UNDER [Net operating surplus] IN DATASET [Gross domestic income]
+1929,2024,Consumption of fixed capital,GDI-BEA-A.csv,[A] Consumption of fixed capital IN DATASET [Gross domestic income]
+1929,2024,Private,GDI-BEA-A.csv,[A] [Private] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
+1929,2024,Government,GDI-BEA-A.csv,[A] [Government] UNDER [Consumption of fixed capital] IN DATASET [Gross domestic income]
+1929,2024,Statistical discrepancy,GDI-BEA-A.csv,[A] Statistical discrepancy IN DATASET [Gross domestic income]
+1947-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,CPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+1948-01-01,2025-11-01,Unemployment Rate,UNRATE-FRED-M.csv,[M] Unemployment Rate
 1947Q1,2025Q3,Change in private inventories,NGDP-BEA-Q.csv,[Q] [Change in private inventories] UNDER [Gross private domestic investment] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Net exports of goods and services,NGDP-BEA-Q.csv,[Q] Net exports of goods and services IN DATASET [Gross domestic product]
-2003-01-09,2026-01-06,Discount Window Primary Credit Rate,DISCOUNTPRIMARY-FRED-D.csv,[D] Discount Window Primary Credit Rate
-2013-09-23,2026-01-07,Overnight Reverse Repurchase Agreements Award Rate,ONRRP-FRED-D.csv,[D] Overnight Reverse Repurchase Agreements Award Rate
-1948-01-01,2025-11-01,Civilian Labor Force Level,CLF-FRED-M.csv,[M] Civilian Labor Force Level
+1948-01-01,2025-11-01,Population Level,CNP-FRED-M.csv,[M] Population Level
 1959-01-01,2025-09-01,Personal Consumption Expenditures,PCE-FRED-M.csv,[M] Personal Consumption Expenditures
-1982-09-27,2008-12-15,Federal Funds Target Rate (DISCONTINUED),FFRT-FRED-D.csv,[D] Federal Funds Target Rate (DISCONTINUED)
-1994-01-01,2025-11-01,"Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)",U4-FRED-M.csv,"[M] Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)"
-1975-01-01,2025-11-01,Not in Labor Force,NIL-FRED-M.csv,[M] Not in Labor Force
-1947-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,CPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+1948-01-01,2025-11-01,Employment Level,EMP-FRED-M.csv,[M] Employment Level

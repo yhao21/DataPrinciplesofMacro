@@ -1,10 +1,61 @@
 import os, json, warnings, glob
+from datetime import date
 import parse_data
 import request_data
 from pathlib import Path
 import pandas as pd
 
 from MyTools.database import DataCollection
+from MyTools.frequency_conversion import get_frequency
+
+
+def define_update_schedule(current_date):
+    """
+    current_date: a datetime.date received by calling pd.to_datetime().
+    """
+
+    schedule = {}
+    #Annual:     The end of January.
+    schedule['A'] = date(current_date.year, 1, 31)
+
+    #Quarterly:  The end of the first month in each quarter.
+    current_quarter_start = current_date.to_period('Q').start_time
+    month_end_adj = pd.offsets.MonthEnd(0)
+    schedule['Q'] = (current_quarter_start + month_end_adj).date()
+
+    #Monthly:    The end of each month
+    current_month_start = current_date.to_period('M').start_time
+    month_end_adj = pd.offsets.MonthEnd(0)
+    schedule['M'] = (current_month_start + month_end_adj).date()
+
+    #Daily
+    schedule['D'] = current_date.date()
+
+    return schedule
+
+
+def is_time_to_update(data_name, update_all = False):
+    """
+    Return a bool indicating if it is time to update a certain dataset.
+    """
+
+    update_signal = False
+
+    ###------Get data frequency------###
+    freq = get_frequency(data_name)
+
+    ###------Get current date------###
+    current_date = pd.to_datetime(date.today())
+
+    ###------Define updating schedule------###
+    schedule = define_update_schedule(current_date)
+
+    ###------Check validity of updating data------###
+    if current_date.date() == schedule[freq] or update_all:
+        update_signal = True
+
+    return update_signal
+
 
 
 def get_data_params(file_name, add_new_data_seires, path_data_parse):
@@ -61,7 +112,7 @@ def record_downloaded_data_series(dataset_list:list, data_name:str, path_df):
 
 
 
-def update_database(path_data_request, path_data_parse, path_variables, computer, override, add_new_data_seires):
+def update_database(path_data_request, path_data_parse, path_variables, override, add_new_data_seires, update_all = False):
     """
     This is the main function that will request and parse data.
     Steps:
@@ -76,33 +127,40 @@ def update_database(path_data_request, path_data_parse, path_variables, computer
     dataset_list = get_data_params('BEA.json', add_new_data_seires, path_data_parse)
     
     for dataset in dataset_list.keys():
-        # Request data
-        request_data.get_BEA_data(path_data_request, dataset, computer)
-    
-        # Parse data
-        drop_cols = dataset_list[dataset]['drop_cols']
-        MnToBn = dataset_list[dataset]['MnToBn']
-    
-        parse_data.parse_BEA_data(path_data_request, path_data_parse, dataset, override = override, drop_cols=drop_cols, MnToBn = MnToBn)
-    
-        record_downloaded_data_series(dataset_list, dataset, path_variables)
-        print('-'*80)
-    
+
+        ready_to_update = is_time_to_update(dataset, update_all = update_all)
+        if ready_to_update:
+            # Request data
+            request_data.get_BEA_data(path_data_request, dataset)
+            
+            # Parse data
+            drop_cols = dataset_list[dataset]['drop_cols']
+            MnToBn = dataset_list[dataset]['MnToBn']
+            
+            parse_data.parse_BEA_data(path_data_request, path_data_parse, dataset, override = override, drop_cols=drop_cols, MnToBn = MnToBn)
+            
+            record_downloaded_data_series(dataset_list, dataset, path_variables)
+            print('-'*80)
+            
+
+
     #############################################
     #        Download data from FRED
     #############################################
     
     dataset_list = get_data_params('FRED.json', add_new_data_seires, path_data_parse)
     for dataset in dataset_list:
-        # Request data
-        request_data.get_FRED_data(path_data_request, dataset, computer)
-        # Parse data
-        parse_data.parse_FRED_data(path_data_request, path_data_parse, dataset, override)
-    
-        record_downloaded_data_series(dataset_list, dataset, path_variables)
-        print('-'*80)
-    
 
+        ready_to_update = is_time_to_update(dataset, update_all = update_all)
+        if ready_to_update:
+            # Request data
+            request_data.get_FRED_data(path_data_request, dataset)
+            # Parse data
+            parse_data.parse_FRED_data(path_data_request, path_data_parse, dataset, override)
+            
+            record_downloaded_data_series(dataset_list, dataset, path_variables)
+            print('-'*80)
+            
 
     
 
@@ -170,7 +228,7 @@ path_variables = os.path.join('data', 'variables_in_database.csv')
 Run this to request and update your database.
 """
 # Step 1: Download and parse data from websites
-update_database(path_data_request, path_data_parse, path_variables, computer, override, add_new_data_seires)
+update_database(path_data_request, path_data_parse, path_variables, override, add_new_data_seires)
 # Step 2: Update data list
 DataCollection().update_data_series(path_data_parse)
 
@@ -179,12 +237,10 @@ DataCollection().update_data_series(path_data_parse)
 
 ###------Check data series in database------###
 
-db = pd.read_csv(path_variables, index_col = 0).sort_values('variable')
-print("\nData series in the database:")
-print(db.to_string())
-
-#db = db.query('platform == "FRED"')
+#db = pd.read_csv(path_variables, index_col = 0).sort_values('variable')
+#print("\nData series in the database:")
 #print(db.to_string())
+
 
 
 
