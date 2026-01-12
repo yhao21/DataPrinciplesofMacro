@@ -27,6 +27,18 @@ class Message:
                 Total number of observations cannot be greater than {max_periods_to_show}. 
                 (Total number of observations = number of time periods X number of selected variables.)
         """)
+
+
+    def not_enough_obs_for_frequency_conversion(freq):
+        return format_message(
+                f'There is not enough data to convert your dataset to [{frequency_mapping(freq)}] data.'
+                )
+    
+
+    def not_enough_obs():
+        return format_message("There is not enough data being selected.")
+
+
     
     def change_sample_period():
         return format_message('Click on "Modify" to adjust sample period.')
@@ -42,5 +54,4 @@ class Message:
     
     def get_recommend_first_period(derived_first_period, last_period):
         return format_message(f'Example Sample Period: First Period = {derived_first_period}, Last Period = {last_period}')
-    
 

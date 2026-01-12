@@ -713,10 +713,18 @@ class line_frame():
                 st.session_state['indent_config'] = self.indent_config
                 update_table_indent(self.state_name_df, self.state_name_adj_indent)
 
-            if st.session_state[self.state_name_show_table]: # show table
-                self.show_table()
-            else: # show chart
-                self.show_chart(n_legend_cols = n_legend_cols)
+
+            ###------Check if df is ready to present------###
+            df_is_ready, error_message = self.check_if_df_ready()
+
+
+            if df_is_ready:
+                if st.session_state[self.state_name_show_table]: # show table
+                    self.show_table()
+                else: # show chart
+                    self.show_chart(n_legend_cols = n_legend_cols)
+            else:
+                pop_up_message_window(error_message)
 
             
 
@@ -1350,6 +1358,22 @@ class line_frame():
         df = pd.concat([df, df_bg], axis = 1)
 
         return df
+
+
+    def check_if_df_ready(self):
+        df_is_ready = True
+        error_message = []
+
+        df = st.session_state[self.state_name_df]
+
+        ###------If df is empty------###
+        if df.shape[1] < 1:
+            df_is_ready = False
+            error_message.append(Message.not_enough_obs())
+            error_message.append(Message.change_sample_period())
+
+        return df_is_ready, error_message
+
                     
 
 
