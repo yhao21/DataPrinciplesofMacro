@@ -1,7 +1,7 @@
 Start Period,End Period,col_name,csv_name,Data Series
 1948-01-01,2025-11-01,Unemployment Level,UNEMP-FRED-M.csv,[M] Unemployment Level
-2013-09-23,2026-01-12,Overnight Reverse Repurchase Agreements Award Rate,ONRRP-FRED-D.csv,[D] Overnight Reverse Repurchase Agreements Award Rate
-1854-12-01,2026-01-11,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
+2013-09-23,2026-01-16,Overnight Reverse Repurchase Agreements Award Rate,ONRRP-FRED-D.csv,[D] Overnight Reverse Repurchase Agreements Award Rate
+1854-12-01,2026-01-15,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough,RECESSION-FRED-D.csv,[D] NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
 1929,2024,Gross domestic product,RGDP-BEA-A.csv,[A] Gross domestic product IN DATASET [Gross domestic product]
 1929,2024,Personal consumption expenditures,RGDP-BEA-A.csv,[A] Personal consumption expenditures IN DATASET [Gross domestic product]
 1929,2024,Goods,RGDP-BEA-A.csv,[A] [Goods] UNDER [Personal consumption expenditures] IN DATASET [Gross domestic product]
@@ -27,7 +27,7 @@ Start Period,End Period,col_name,csv_name,Data Series
 1929,2024,Nondefense,RGDP-BEA-A.csv,[A] [Nondefense] UNDER [Federal] IN DATASET [Gross domestic product]
 1929,2024,State and local,RGDP-BEA-A.csv,[A] [State and local] UNDER [Government consumption expenditures and gross investment] IN DATASET [Gross domestic product]
 1967-01-01,2025-11-01,Unemployment Rate - Job Losers (U-2),U2-FRED-M.csv,[M] Unemployment Rate - Job Losers (U-2)
-2021-07-29,2026-01-12,Standing Repo Facility Minimum Bid Rate,SREPOMR-FRED-D.csv,[D] Standing Repo Facility Minimum Bid Rate
+2021-07-29,2026-01-16,Standing Repo Facility Minimum Bid Rate,SREPOMR-FRED-D.csv,[D] Standing Repo Facility Minimum Bid Rate
 2008-10-09,2021-07-28,Interest Rate on Required Reserves (IORR Rate) (DISCONTINUED),IORR-FRED-D.csv,[D] Interest Rate on Required Reserves (IORR Rate) (DISCONTINUED)
 1947Q1,2025Q3,Gross domestic income,GDI-BEA-Q.csv,[Q] Gross domestic income IN DATASET [Gross domestic income]
 1947Q1,2025Q3,"Compensation of employees, paid",GDI-BEA-Q.csv,"[Q] Compensation of employees, paid IN DATASET [Gross domestic income]"
@@ -55,14 +55,14 @@ Start Period,End Period,col_name,csv_name,Data Series
 1947Q1,2025Q3,Statistical discrepancy,GDI-BEA-Q.csv,[Q] Statistical discrepancy IN DATASET [Gross domestic income]
 1994-01-01,2025-11-01,"Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)",U4-FRED-M.csv,"[M] Total Unemployed Plus Discouraged Workers, as a Percent of the Civilian Labor Force Plus Discouraged Workers (U-4)"
 1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average,Chained_CPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
-2008-12-16,2026-01-13,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
+2008-12-16,2026-01-17,Federal Funds Target Range - Upper Limit,FFRTUPPER-FRED-D.csv,[D] Federal Funds Target Range - Upper Limit
 1999-12-01,2025-11-01,Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,Chained_CoreCPIU-FRED-M.csv,[M] Chained Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
 1957-01-01,2025-11-01,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average,CoreCPIU-FRED-M.csv,[M] Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
 1947Q1,2025Q3,Real Gross Domestic Product,RGDP-FRED-Q.csv,[Q] Real Gross Domestic Product
 1949Q1,2035Q4,Real Potential Gross Domestic Product,FRGDP-FRED-Q.csv,[Q] Real Potential Gross Domestic Product
 1994-01-01,2025-11-01,"Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)",U6-FRED-M.csv,"[M] Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)"
 1994-01-01,2025-11-01,"Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)",U5-FRED-M.csv,"[M] Total Unemployed, Plus Discouraged Workers, Plus All Other Persons Marginally Attached to the Labor Force, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-5)"
-2003-01-09,2026-01-09,Discount Window Primary Credit Rate,DISCOUNTPRIMARY-FRED-D.csv,[D] Discount Window Primary Credit Rate
+2003-01-09,2026-01-15,Discount Window Primary Credit Rate,DISCOUNTPRIMARY-FRED-D.csv,[D] Discount Window Primary Credit Rate
 1959-01,2025-09,Personal consumption expenditures (PCE),PCE-BEA-M.csv,[M] Personal consumption expenditures (PCE) IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Goods,PCE-BEA-M.csv,[M] Goods IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Durable goods,PCE-BEA-M.csv,[M] [Durable goods] UNDER [Goods] IN DATASET [Personal consumption expenditures (PCE)]
@@ -94,12 +94,12 @@ Start Period,End Period,col_name,csv_name,Data Series
 1959-01,2025-09,Housing,PCE-BEA-M.csv,[M] Housing IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Market-based PCE,PCE-BEA-M.csv,[M] Market-based PCE IN DATASET [Personal consumption expenditures (PCE)]
 1959-01,2025-09,Market-based PCE excluding food and energy,PCE-BEA-M.csv,[M] Market-based PCE excluding food and energy IN DATASET [Personal consumption expenditures (PCE)]
-2008-12-16,2026-01-13,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
+2008-12-16,2026-01-17,Federal Funds Target Range - Lower Limit,FFRTLOWER-FRED-D.csv,[D] Federal Funds Target Range - Lower Limit
 1949-01-01,2031-10-01,Natural Rate of Unemployment (Short-Term) (DISCONTINUED),NRUNEM-FRED-M.csv,[M] Natural Rate of Unemployment (Short-Term) (DISCONTINUED)
 1948-01-01,2025-11-01,Civilian Labor Force Level,CLF-FRED-M.csv,[M] Civilian Labor Force Level
 1975-01-01,2025-11-01,Not in Labor Force,NIL-FRED-M.csv,[M] Not in Labor Force
 1949Q1,2035Q4,Nominal Potential Gross Domestic Product,FNGDP-FRED-Q.csv,[Q] Nominal Potential Gross Domestic Product
-2021-07-29,2026-01-13,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
+2021-07-29,2026-01-20,Interest Rate on Reserve Balances (IORB Rate),IORB-FRED-D.csv,[D] Interest Rate on Reserve Balances (IORB Rate)
 1982-09-27,2008-12-15,Federal Funds Target Rate (DISCONTINUED),FFRT-FRED-D.csv,[D] Federal Funds Target Rate (DISCONTINUED)
 1948-01-01,2025-11-01,Labor Force Participation Rate,LFPR-FRED-M.csv,[M] Labor Force Participation Rate
 1948-01-01,2025-11-01,Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1),U1-FRED-M.csv,[M] Percent of Civilian Labor Force Unemployed 15 Weeks and over (U-1)
@@ -129,7 +129,7 @@ Start Period,End Period,col_name,csv_name,Data Series
 1947Q1,2025Q3,National defense,NGDP-BEA-Q.csv,[Q] [National defense] UNDER [Federal] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,Nondefense,NGDP-BEA-Q.csv,[Q] [Nondefense] UNDER [Federal] IN DATASET [Gross domestic product]
 1947Q1,2025Q3,State and local,NGDP-BEA-Q.csv,[Q] [State and local] UNDER [Government consumption expenditures and gross investment] IN DATASET [Gross domestic product]
-1954-07-01,2026-01-09,Federal Funds Effective Rate,FFER-FRED-D.csv,[D] Federal Funds Effective Rate
+1954-07-01,2026-01-15,Federal Funds Effective Rate,FFER-FRED-D.csv,[D] Federal Funds Effective Rate
 1929,2024,Gross domestic income,GDI-BEA-A.csv,[A] Gross domestic income IN DATASET [Gross domestic income]
 1929,2024,"Compensation of employees, paid",GDI-BEA-A.csv,"[A] Compensation of employees, paid IN DATASET [Gross domestic income]"
 1929,2024,Wages and salaries,GDI-BEA-A.csv,"[A] [Wages and salaries] UNDER [Compensation of employees, paid] IN DATASET [Gross domestic income]"
