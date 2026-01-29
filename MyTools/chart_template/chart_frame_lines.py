@@ -1103,9 +1103,7 @@ class line_frame():
     def display_chart(self, plot_df, content_height, n_legend_cols):
         # Hide grid line for both axis.
         chart = self.get_chart_lines(plot_df, content_height, n_legend_cols = n_legend_cols).configure_axis(grid = False)
-        #st.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 'stretch')
-        #st.altair_chart(chart, key = self.key('ChartRightBoxChart'), use_container_width = True, width = 'stretch')
-        st.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 1000)
+        st.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 'stretch')
 
 
     def get_chart_lines(self, df, content_height:int, n_legend_cols = 4):
