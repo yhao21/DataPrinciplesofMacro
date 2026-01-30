@@ -1027,6 +1027,7 @@ class line_frame():
 
             if n_obs <= self.max_periods_to_show:
                 self.display_chart(plot_df, content_height, n_legend_cols)
+
             else:
                 plot_df, message, is_highest_freq_level = self.adjust_data_frequency(plot_df)
                 st.session_state[self.state_name_freq_warning_message] = message
@@ -1043,6 +1044,7 @@ class line_frame():
                         
                     ###------Display chart------###
                     self.display_chart(plot_df, content_height, n_legend_cols)
+
                 else:
                     if not st.session_state[self.state_name_show_modify_window]:
                         pop_up_message_window(message)
@@ -1106,6 +1108,12 @@ class line_frame():
         # Hide grid line for both axis.
         chart = self.get_chart_lines(plot_df, content_height, n_legend_cols = n_legend_cols).configure_axis(grid = False)
         st.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 'stretch')
+        #st.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 1340)
+        #st.altair_chart(chart, key = self.key('ChartRightBoxChart'), use_container_width = True)
+
+
+
+
 
 
     def get_chart_lines(self, df, content_height:int, n_legend_cols = 4):
@@ -1173,7 +1181,7 @@ class line_frame():
                     title = None,
                     axis = alt.Axis(
                         labelAngle = 0,
-                        labelAlign = 'center' # center the tick label.
+                        labelAlign = 'center', # center the tick label.
                         )
                     ).scale(zero = False),
                 y = alt.Y('value:Q', title = None).scale(zero = False),
@@ -1228,12 +1236,13 @@ class line_frame():
                     alt.value(1),
                     alt.value(0.2)
                     ),
-                ).add_params(legend_selector).transform_filter(bar_selector).properties(height = chart_height, width = 'container')
+                ).add_params(legend_selector).transform_filter(bar_selector
+                        ).properties(
+                                height = chart_height,
+                                width = 'container'
+                                )
     
         ###------If zero_line = True, show zero line (y = 0)------###
-        #zero_mark_opacity = alt.value(0)
-        #if st.session_state[self.state_name_zero_line]:
-        #    zero_mark_opacity = alt.value(1)
     
         zero_mark = alt.Chart(df).mark_line(color = 'grey', size = 3).encode(
                 x = 'Time:N',
@@ -1301,9 +1310,228 @@ class line_frame():
     
 
         # Use configure_view to change color and size of the chart border.
+        #chart = (chart & bar).configure_view(stroke = 'grey', strokeWidth = .2)
+
+        #chart = (chart & bar).resolve_scale(x = 'shared').configure_view(stroke = 'grey', strokeWidth = .2)
         chart = (chart & bar).configure_view(stroke = 'grey', strokeWidth = .2)
 
         return chart
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#    def get_chart_lines(self, df, content_height:int, n_legend_cols = 4):
+#        """
+#        Return a line chart.
+#    
+#        bg_lines:   An alt.Chart() item, e.g., a plot of growth rate of gdp.
+#                    If you pass a `bg_lines`, this function will add `bg_lines` (an alt chart item) to the main chart.
+#        zero_line:  If True, draw y = 0 in chart. Usually used in growth rate chart.
+#    
+#        """
+#
+#
+#        ###------Standardize column name for df------###
+#        df.columns = standardize_col_name(df.columns.to_list())
+#        col_selected = df.columns.to_list()
+#        df['Time'] = df.index.values.astype(str)    # convert time column to string
+#        df = df[['Time'] + col_selected].reset_index(drop = True)
+#
+#
+#        ###------Get df for bar chart------###
+#        # Replace all empty values in df with 0, so the bar chart can cover all time periods in df.
+#        df_bar = df[['Time'] + [df.columns[1]]].fillna(0)
+#
+#    
+#        ###------Define height for elements------###
+#        #bar_height = 0.07 * content_height
+#        bar_height = 0.04 * content_height
+#        legend_height = 0.25 * content_height
+#        chart_height = content_height - bar_height - legend_height
+#    
+#    
+#        ###------Define selector------###
+#        selector = alt.selection_point(
+#                nearest = True,
+#                on = 'pointerover',
+#                clear = 'pointerout',
+#                empty = False
+#                )
+#    
+#        #bar_selector = alt.selection_interval(encodings = ['x'])
+#
+#        legend_selector = alt.selection_point(
+#                fields = ['key'],
+#                bind = 'legend',
+#                on = 'click',
+#                clear = 'dblclick',
+#                )
+#    
+#        ###------Define spike line------###
+#        rule_tooltip = format_tooltip(col_selected)
+#        rule = alt.Chart(df).mark_rule(color = 'grey').encode(
+#                x = 'Time:N',
+#                #y = alt.value(0),
+#                y2 = alt.value('height'),
+#                opacity = alt.condition(selector, alt.value(1), alt.value(0)),
+#                tooltip = rule_tooltip,
+#                ).add_params(selector)#.transform_filter(bar_selector)
+#    
+#    
+#        ###------Define lines------###
+#        lines = alt.Chart(df).transform_fold(col_selected).mark_line().encode(
+#                x = alt.X(
+#                    'Time:N',
+#                    title = None,
+#                    axis = alt.Axis(
+#                        labelAngle = 0,
+#                        labelAlign = 'center', # center the tick label.
+#                        )
+#                    ).scale(zero = False),
+#                y = alt.Y('value:Q', title = None).scale(zero = False),
+#                color = alt.Color(
+#                    'key:N',
+#                    scale = alt.Scale(
+#                        domain = col_selected,
+#                        range = [st.session_state[self.state_name_line_format_info][i]['line_color'] for i in col_selected]
+#                        ),
+#                    legend = alt.Legend(
+#                        title = None,
+#                        titleLimit = 1500,
+#                        orient = 'bottom',
+#                        direction = 'horizontal',
+#                        columns = n_legend_cols,
+#                        labelLimit = 500,
+#                        symbolSize = 400,
+#                        symbolStrokeWidth = 4,
+#                        offset = 0, # Distance between legend and chart. Smaller -> Closer.
+#                        ),
+#                    # Legend is arranged in the same order as in self.df
+#                    sort = list(st.session_state[self.state_name_line_format_info].keys())
+#                    ),
+#
+#                size = alt.Size(
+#                    'key:N',
+#                    scale = alt.Scale(
+#                        domain = col_selected,
+#                        range = [st.session_state[self.state_name_line_format_info][i]['line_width'] for i in col_selected] if len(col_selected) > 1 else [st.session_state[self.state_name_line_format_info][col_selected[0]]['line_width'], st.session_state[self.state_name_line_format_info][col_selected[0]]['line_width'] - 0.01]
+#                        ),
+#                    # If I set legend = None, if will overlap with the color legend, and the symbol
+#                    # will not present properly (clipped). I have not yet figure out how to solve
+#                    # this problem, so I simply put the Size legend on the left of chart and 
+#                    # set the strokewidth to 0 to hide it.
+#                    legend = alt.Legend(
+#                        orient = 'left', values = [''], title = None, symbolStrokeWidth = 0
+#                        )
+#                    ),
+#
+#                strokeDash = alt.StrokeDash(
+#                    'key:N',
+#                    scale = alt.Scale(
+#                        domain = col_selected,
+#                        range = [st.session_state[self.state_name_line_format_info][i]['line_style'] for i in col_selected]
+#                        ),
+#
+#                    legend = None
+#                    ),
+#
+#                opacity = alt.condition(
+#                    legend_selector,
+#                    alt.value(1),
+#                    alt.value(0.2)
+#                    ),
+#                ).add_params(legend_selector).properties(height = chart_height)
+#                #).add_params(legend_selector).transform_filter(bar_selector).properties(height = chart_height)
+#    
+#        ###------If zero_line = True, show zero line (y = 0)------###
+#        #zero_mark_opacity = alt.value(0)
+#        #if st.session_state[self.state_name_zero_line]:
+#        #    zero_mark_opacity = alt.value(1)
+#    
+#        zero_mark = alt.Chart(df).mark_line(color = 'grey', size = 3).encode(
+#                x = 'Time:N',
+#                y = alt.datum(0),
+#                #opacity = zero_mark_opacity,
+#                )#.transform_filter(bar_selector)
+#
+#        ###------Add selection bar below the chart------###
+#        bar = alt.Chart(df_bar).mark_bar(color = 'grey').encode(
+#                x = alt.X('Time:N', title = None, axis = None),
+#                y = alt.value(1),
+#                #opacity = alt.condition(bar_selector, alt.value(.4), alt.value(0.2)),
+#                opacity = alt.value(0),
+#                tooltip = alt.Tooltip('Time:N', title = ' '),
+#                #).add_params(
+#                #        bar_selector
+#                ).properties(
+#                        height = bar_height,
+#                        title = alt.Title(
+#                            #"Drag in the bar chart below to select a period of time.",
+#                            text = [
+#                                get_hint_message(
+#                                # Use .join, so there will not be a large gap between each sentence when users download the chart.
+#                                " ".join([
+#                                    "Drag the bar above to adjust selected time periods.",
+#                                    "Click on unselected area to restore the default period."
+#                                    ])
+#                                ),
+#                                get_hint_message(
+#                                " ".join([
+#                                    "Click on one of the items below to highligh a single line.",
+#                                    "Hold Shift button and click to select multiple items.",
+#                                    "Double click in the main chart to restore default setup."
+#                                    ])
+#                                ),
+#                                get_hint_message("Shaded areas indicate U.S. recessions.")
+#                                ],
+#                            fontSize = 14,
+#                            fontWeight = 400, # normal text: 400, bold: larger number, e.g., 800
+#                            offset = 5, # The distance between title and chart, the smaller the closer.
+#                            orient = 'bottom'
+#                            )
+#                )
+#
+#        ###------Recession periods------###
+#        df_recession = self.get_recession_indicator_try(df)
+#        recession_periods = alt.Chart(df_recession).mark_rect(stroke = None).encode(
+#                x = 'Time:N',
+#                opacity = alt.value(st.session_state[self.state_name_recession_opacity]),
+#                color = alt.value(st.session_state[self.state_name_recession_color])
+#                )#.transform_filter(bar_selector)
+#
+#
+#    
+#        ###------Merge chart items------###
+#        chart = alt.layer(rule, lines)
+#
+#        # If zero_line = True, show zero line (y = 0)
+#        if st.session_state[self.state_name_zero_line]:
+#            chart = alt.layer(chart, zero_mark)
+#        # Show recession periods if triggered.
+#        if st.session_state[self.state_name_show_recession]:
+#            chart = alt.layer(chart, recession_periods)
+#    
+#
+#        # Use configure_view to change color and size of the chart border.
+#        #chart = (chart & bar).configure_view(stroke = 'grey', strokeWidth = .2)
+#        chart = chart.configure_view(stroke = 'grey', strokeWidth = .2)
+#
+#        return chart
+#
     
 
     def update_freq(self, freq):
