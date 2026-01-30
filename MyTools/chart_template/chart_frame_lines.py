@@ -1163,7 +1163,7 @@ class line_frame():
                 y2 = alt.value('height'),
                 opacity = alt.condition(selector, alt.value(1), alt.value(0)),
                 tooltip = rule_tooltip,
-                ).add_params(selector).transform_filter(bar_selector)
+                ).add_params(selector).transform_filter(bar_selector).properties(width = 'container')
     
     
         ###------Define lines------###
@@ -1228,7 +1228,7 @@ class line_frame():
                     alt.value(1),
                     alt.value(0.2)
                     ),
-                ).add_params(legend_selector).transform_filter(bar_selector).properties(height = chart_height)
+                ).add_params(legend_selector).transform_filter(bar_selector).properties(height = chart_height, width = 'container')
     
         ###------If zero_line = True, show zero line (y = 0)------###
         #zero_mark_opacity = alt.value(0)
@@ -1239,7 +1239,7 @@ class line_frame():
                 x = 'Time:N',
                 y = alt.datum(0),
                 #opacity = zero_mark_opacity,
-                ).transform_filter(bar_selector)
+                ).transform_filter(bar_selector).properties(width = 'container')
 
         ###------Add selection bar below the chart------###
         bar = alt.Chart(df_bar).mark_bar(color = 'grey').encode(
@@ -1252,6 +1252,7 @@ class line_frame():
                         bar_selector
                 ).properties(
                         height = bar_height,
+                        width = 'container',
                         title = alt.Title(
                             #"Drag in the bar chart below to select a period of time.",
                             text = [
@@ -1284,7 +1285,7 @@ class line_frame():
                 x = 'Time:N',
                 opacity = alt.value(st.session_state[self.state_name_recession_opacity]),
                 color = alt.value(st.session_state[self.state_name_recession_color])
-                ).transform_filter(bar_selector)
+                ).transform_filter(bar_selector).properties(width = 'container')
 
 
     
@@ -1295,8 +1296,8 @@ class line_frame():
         if st.session_state[self.state_name_zero_line]:
             chart = alt.layer(chart, zero_mark)
         # Show recession periods if triggered.
-        #if st.session_state[self.state_name_show_recession]:
-        #    chart = alt.layer(chart, recession_periods)
+        if st.session_state[self.state_name_show_recession]:
+            chart = alt.layer(chart, recession_periods)
     
 
         # Use configure_view to change color and size of the chart border.
