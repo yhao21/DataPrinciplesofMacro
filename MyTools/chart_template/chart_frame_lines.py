@@ -991,18 +991,17 @@ class line_frame():
         if st.session_state[self.state_name_modify_content] and st.session_state[self.state_name_adj_indent]:
             update_table_indent(self.state_name_df, self.state_name_adj_indent)
 
-        colLeft, colRight = st.columns([0.2, 0.8])
 
 
         ###------A list of variables to plot (left side)------###
-        gdp_items = colLeft.dataframe(
+        gdp_items = st.dataframe(
                     pd.DataFrame(df.index, columns = ['Select data series to plot:']),
                     on_select = 'rerun',
                     selection_mode = 'multi-row',
                     hide_index = True,
                     height = content_height - 30,
                     key = self.key('ChartLeftBoxList'),
-                    #width = 300
+                    width = 300
                 )
         # a list of index for rows being selected, such as [0, 1, 2].
         selected_items = gdp_items.selection['rows']
@@ -1027,9 +1026,7 @@ class line_frame():
 
 
             if n_obs <= self.max_periods_to_show:
-                #self.display_chart(plot_df, content_height, n_legend_cols)
-                chart = self.get_chart_lines(plot_df, content_height, n_legend_cols = n_legend_cols).configure_axis(grid = False)
-                colRight.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 'stretch')
+                self.display_chart(plot_df, content_height, n_legend_cols)
             else:
                 plot_df, message, is_highest_freq_level = self.adjust_data_frequency(plot_df)
                 st.session_state[self.state_name_freq_warning_message] = message
@@ -1045,9 +1042,7 @@ class line_frame():
                         pop_up_message_window(message)
                         
                     ###------Display chart------###
-                    #self.display_chart(plot_df, content_height, n_legend_cols)
-                    chart = self.get_chart_lines(plot_df, content_height, n_legend_cols = n_legend_cols).configure_axis(grid = False)
-                    colRight.altair_chart(chart, key = self.key('ChartRightBoxChart'), width = 'stretch')
+                    self.display_chart(plot_df, content_height, n_legend_cols)
                 else:
                     if not st.session_state[self.state_name_show_modify_window]:
                         pop_up_message_window(message)
@@ -1300,8 +1295,8 @@ class line_frame():
         if st.session_state[self.state_name_zero_line]:
             chart = alt.layer(chart, zero_mark)
         # Show recession periods if triggered.
-        if st.session_state[self.state_name_show_recession]:
-            chart = alt.layer(chart, recession_periods)
+        #if st.session_state[self.state_name_show_recession]:
+        #    chart = alt.layer(chart, recession_periods)
     
 
         # Use configure_view to change color and size of the chart border.
