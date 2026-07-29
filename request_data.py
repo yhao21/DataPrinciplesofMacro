@@ -51,7 +51,7 @@ def save_json(data_path, content):
         json.dump(content, f)
 
 
-def get_api_key(computer, file_name):
+def get_api_key(file_name):
 
     with open(Path('api_key') / f'{file_name}') as f:
         key = json.load(f)['xie']
@@ -60,13 +60,13 @@ def get_api_key(computer, file_name):
 
 
 
-def request_BEA_data(data_name, data_path, computer):
+def request_BEA_data(data_name, data_path):
     """
     This function is a template to request data from BEA
     """
 
     ###------Get api key------###
-    key = get_api_key(computer, 'BEA.json')
+    key = get_api_key('BEA.json')
 
     ###------Format url------###
     params = get_request_params(data_name, key)
@@ -78,9 +78,9 @@ def request_BEA_data(data_name, data_path, computer):
     save_json(data_path, data)
     
 
-def request_FRED_data(data_name, data_path, computer):
+def request_FRED_data(data_name, data_path):
     ###------load api key------###
-    key = get_api_key(computer, 'FRED.json')
+    key = get_api_key('FRED.json')
 
     ###------form url------###
     with open(Path('config_data_request')/'FRED.json') as f:
@@ -107,14 +107,14 @@ def request_FRED_data(data_name, data_path, computer):
 #               API calls
 #############################################
 
-def get_BEA_data(data_dir, data_name, computer):
+def get_BEA_data(data_dir, data_name):
     """
     This function get data from BEA.
     """
 
     data_path = os.path.join(data_dir, f'{data_name}.json')
 
-    request_BEA_data(data_name, data_path, computer)
+    request_BEA_data(data_name, data_path)
     print(f'Received new dataset: [{data_name}]')
     # sleep
     request_break()
@@ -122,13 +122,13 @@ def get_BEA_data(data_dir, data_name, computer):
 
 
 
-def get_FRED_data(data_dir, data_name, computer):
+def get_FRED_data(data_dir, data_name):
     """
     This function get data from FRED.
     """
     data_path = Path(data_dir)/f"{data_name}.json"
 
-    request_FRED_data(data_name, data_path, computer)
+    request_FRED_data(data_name, data_path)
     print(f'Received new dataset: [{data_name}]')
     # sleep
     request_break()
@@ -155,9 +155,8 @@ if __name__ == "__main__":
     #get_NGDP_BEA(data_dir, data_name)
 
 
-    computer = 'popos'
     data_name = 'UNRATE-FRED-M' # unemployment rate
-    get_FRED_data(data_dir, data_name, computer)
+    get_FRED_data(data_dir, data_name)
 
 
 
