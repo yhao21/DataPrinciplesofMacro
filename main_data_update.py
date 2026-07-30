@@ -201,6 +201,8 @@ add_new_data_seires = False
 
 # If you want to wipe out previous data.
 override = False
+# If you want to update all data series
+update_all_data = True
 
 # specify which computer you are using, so it will find the correct api-key.
 computer = 'dell' # or dell, popos
@@ -228,7 +230,7 @@ path_variables = os.path.join('data', 'variables_in_database.csv')
 Run this to request and update your database.
 """
 # Step 1: Download and parse data from websites
-update_database(path_data_request, path_data_parse, path_variables, override, add_new_data_seires)
+update_database(path_data_request, path_data_parse, path_variables, override, add_new_data_seires, update_all = update_all_data)
 # Step 2: Update data list
 DataCollection().update_data_series(path_data_parse)
 
